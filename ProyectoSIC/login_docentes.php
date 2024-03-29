@@ -43,7 +43,7 @@
     <main class="form-signin w-100 m-auto">
       <form action="inicio_sesion_doc.php" method="POST">
         <center>
-          <a href="../index.html"> <img class="mb-4" src="../ProyectoSIC/img/Logo TESCo.jpg" alt="" width="120" height="60"> </a>
+          <a href="../ProyectoSIC/index.html"> <img class="mb-4" src="../ProyectoSIC/img/Logo TESCo.jpg" alt="" width="120" height="60"> </a>
           <h1 class="h3 mb-3 fw-normal">Sesión Docentes</h1>
           <?php
             if (isset($_GET['error'])){

@@ -80,7 +80,7 @@ if (!isset($_SESSION["Email"])) {
               <input type="text" name="idDocente" class="form-control" id="floatingInput" placeholder="idDocente">
               <label for="floatingInput">ID</label>
             </div>
-            <center><h5>y</h5></center>
+            <center><h5>ó</h5></center>
             <div class="form-floating">
               <input type="text" name="Usuario" class="form-control" id="floatingInput" placeholder="Usuario">
               <label for="floatingInput">Usuario</label>

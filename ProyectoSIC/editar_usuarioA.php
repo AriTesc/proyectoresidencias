@@ -9,12 +9,12 @@ if (isset($_POST['Usuario']) || isset($_POST['idAlumno'])) {
         return $data;
     }
 	$idAlumno = validar($_POST['idAlumno']);
-	$Usuario = validar($_POST['Usuario']);
+	$Email = validar($_POST['Usuario']);
 	$NombreCompleto = validar($_POST['Nombre_Completo']);
     $Contrasenia = validar($_POST['Contrasenia']);
 	$Contrasenia = md5($Contrasenia);
-	if ($Usuario<>''||$Usuario<>null) {
-		$updateN="UPDATE alumnos SET Usuario='$Usuario' WHERE alumnos.idAlumno=$idAlumno";
+	if ($Email<>''||$Email<>null) {
+		$updateN="UPDATE alumnos SET Usuario='$Email' WHERE alumnos.idAlumno=$idAlumno";
 		$ejecutarN=mysqli_query($conexion, $updateN);
 	}
 	if ($NombreCompleto<>''||$NombreCompleto<>null) {

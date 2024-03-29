@@ -9,8 +9,8 @@ if (isset($_POST['idDocente']) || isset($_POST['Usuario'])) {
         return $data;
     }
 	$idDocente = validar($_POST['idDocente']);
-	$Usuario = validar($_POST['Usuario']);
-	$sql = "DELETE FROM docentes WHERE Usuario = '$Usuario' || idDocente = '$idDocente'";
+	$Email = validar($_POST['Usuario']);
+	$sql = "DELETE FROM docentes WHERE Usuario = '$Email' || idDocente = '$idDocente'";
 	$query = $conexion->query($sql);
 	if ($query === TRUE	) {
 		header('Location: borrar_usuario.php?success=El usuario se eliminó con éxito');

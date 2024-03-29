@@ -86,7 +86,7 @@ if (!isset($_SESSION["Email"])) {
                 <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false"> Más... </button>
                 <div class="collapse" id="account-collapse">
                   <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li><a href="crear_usuario3.php" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Registrar Admin</a></li>
+                    <li><a href="crear_usuario3.php"class="link-body-emphasis d-inline-flex text-decoration-none rounded">Registrar Admin</a></li>
                     <li><a href="cierre_sesion.php" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Cerrar sesión</a></li>
                   </ul>
                 </div>

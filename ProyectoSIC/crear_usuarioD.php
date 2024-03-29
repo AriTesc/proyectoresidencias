@@ -8,10 +8,10 @@ if (isset($_POST['Usuario']) && isset($_POST['Nombre_Completo']) && isset($_POST
         $data = htmlspecialchars($data);
         return $data;
     }
-	$Usuario = validar($_POST['Usuario']);
+	$Email = validar($_POST['Usuario']);
 	$NombreCompleto = validar($_POST['Nombre_Completo']);
     $Contrasenia = validar($_POST['Contrasenia']);
-	if (empty($Usuario)) {
+	if (empty($Email)) {
         header('location: crear_usuario.php?error=Se requiere usuario');
         exit();
     } elseif (empty($NombreCompleto)) {
@@ -22,13 +22,13 @@ if (isset($_POST['Usuario']) && isset($_POST['Nombre_Completo']) && isset($_POST
         exit();
     } else {
 		$Contrasenia = md5($Contrasenia);
-		$sql = "SELECT * FROM docentes WHERE Usuario = '$Usuario'";
+		$sql = "SELECT * FROM docentes WHERE Usuario = '$Email'";
 		$query = $conexion->query($sql);
 		if (mysqli_num_rows($query) > 0) {
 			header('Location: crear_usuario.php?error=El usuario ya existe');
 			exit();
 		}else{
-			$sql2="INSERT INTO docentes(Usuario, Nombre_Completo, Contrasenia) VALUES ('$Usuario','$NombreCompleto','$Contrasenia')";
+			$sql2="INSERT INTO docentes(Usuario, Nombre_Completo, Contrasenia) VALUES ('$Email','$NombreCompleto','$Contrasenia')";
 			$query2 = $conexion->query($sql2);
 			if ($query2){
 				header('Location: crear_usuario.php?success=El usuario se registro con exito');

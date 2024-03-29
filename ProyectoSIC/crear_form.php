@@ -93,7 +93,7 @@ if (!isset($_SESSION["Usuario"])) {
                     <div class="form-group">
                         <label class="col-md-12 control-label" for="time"></label>
                         <div class="col-md-12">
-                            <input id="time" name="time" placeholder="Ingrese el límite de tiempo para la prueba (en minutos)" class="form-control input-md" min="1" type="number" required>
+                            <input id="time" name="time" placeholder="Ingrese el límite de tiempo total para la prueba (en minutos)" class="form-control input-md" min="1" type="number" required>
                         </div>
                     </div>
                     <div class="form-group">

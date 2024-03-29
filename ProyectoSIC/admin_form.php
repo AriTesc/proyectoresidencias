@@ -61,6 +61,7 @@ if (!isset($_SESSION["Usuario"])) {
     </div>
     <div class="col-6">
       <!--Inicio de contenido-->
+      <br><br>
       <?php
       include_once("conexion.php");
       $result = mysqli_query($conexion,"SELECT * FROM quiz ORDER BY date DESC") or die('Error');
@@ -90,6 +91,7 @@ if (!isset($_SESSION["Usuario"])) {
                 <td>'.$total.'</td>
                 <td>'.$sahi*$total.'</td>
                 <td>'.$time.'&nbsp;min</td>
+                <td><b><a href="eliminar_form.php?eid='.$eid.'" class="pull-right btn sub1" style="margin:0px;background:red"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span>&nbsp;<span><b>Eliminar</b></span></a></b></td>
                 </tr>';
             }
             $c=0;
